@@ -25,7 +25,7 @@ pipeline {
         stage('Build image') {
             steps {
                 sshagent(credentials: ['Dockerkey']) {
-                sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.32.198 "/home/ec2-user/build.sh "'
+                sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.32.198 "/home/ec2-user/buildcompose.sh "'
               }
             }
         }
