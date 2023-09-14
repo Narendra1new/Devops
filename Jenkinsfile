@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['Dockerkey']) {
                 sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.32.198 '
-                sh 'scp -r /home/ec2-user/slave/workspace/Devops/Devops/index.html ec2-user@172.31.32.198:/home/ec2-user'
+                sh 'scp -r index.html ec2-user@172.31.32.198:/home/ec2-user'
               }
             }
         }
